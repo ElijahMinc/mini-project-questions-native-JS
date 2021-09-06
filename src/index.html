@@ -1,0 +1,93 @@
+<!doctype html>
+<html>
+
+<head>
+   <meta charset="utf-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <link href="https://cdn.muicss.com/mui-latest/css/mui.min.css" rel="stylesheet" type="text/css" />
+   <script src="https://cdn.muicss.com/mui-latest/js/mui.min.js"></script>
+   <style>
+      /**
+ * Body CSS
+ */
+
+      html,
+      body {
+         height: 100%;
+      }
+
+      html,
+      body,
+      input,
+      textarea,
+      button {
+         -webkit-font-smoothing: antialiased;
+         -moz-osx-font-smoothing: grayscale;
+         text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.004);
+      }
+
+
+      /**
+ * Sidebar CSS
+ */
+
+      #sidebar {
+         background-color: #2196F3;
+         padding: 15px;
+      }
+
+      @media (min-width: 768px) {
+         #sidebar {
+            position: fixed;
+            top: 0;
+            bottom: 0;
+            width: 180px;
+            height: 100%;
+            padding-top: 30px;
+         }
+      }
+
+
+      /**
+ * Content CSS
+ */
+      @media (min-width: 768px) {
+         #content {
+            margin-left: 180px;
+         }
+      }
+   </style>
+</head>
+
+<body>
+   <div class="attention-modal" id="attention-modal"></div>
+   <button class="mui-btn mui-btn--fab mui-btn--primary" id="open-modal-btn">Вход</button>
+   <div id="sidebar">
+      <div class="mui--text-white mui--text-display1 mui--align-vertical">Elijah Minc</div>
+      <p class="mui--text-white">
+         Mini-project-Firebase-Webpack
+      </p>
+   </div>
+   <div id="content" class="mui-container-fluid">
+      <div class="mui-row">
+         <div class="mui-col-sm-10 mui-col-sm-offset-1">
+            <br>
+            <br>
+            <form class="mui-form" id="form-question">
+               <div class="mui-textfield mui-textfield--float-label">
+                  <input type="text" id="input-question" required minlength="10" maxlength="256">
+                  <label for="input-question">Ваш вопрос</label>
+               </div>
+               <button type="submit" class="mui-btn mui-btn--primary" id="btn-question" disabled>Задать вопрос</button>
+            </form>
+            <br>
+            <div class="mui--text-black-54 mui--text-body2 question-block" id="question-block"></div>
+            <br>
+            <br>
+         </div>
+      </div>
+   </div>
+</body>
+
+</html>
